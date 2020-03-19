@@ -1,0 +1,36 @@
+<h2>My Heroes</h2>
+
+<ul class="heroes">
+    <li *ngFor="let hero of heroes">
+        <a routerLink="/detail/{{hero.id}}">
+            <span class="badge">{{hero.id}}</span> {{hero.name}}
+        </a>
+        <button class="delete" title="delete hero"
+        (click)="delete(hero)">x</button>
+        
+    </li>
+</ul>
+
+<div>
+    <label>Hero name:
+        <input #heroName/>
+    </label>
+     <!-- (click) passes input value to add() and then clears the input -->
+    <button (click)="add(heroName.value); heroName.value=''">
+        add
+    </button>
+
+</div>
+
+
+
+<!-- ###########################################
+One-way data binding from the selectedHero property 
+of the HeroesComponent to the hero property of the 
+target element, which maps the hero property of the 
+HeroDetailComponent.
+Now when the user clicks a hero in the list, the 
+selectedHero changes, the property binding updates Hero 
+and the HeroDetailComponent displays the new hero. 
+<app-hero-detail [hero]="selectedHero"></app-hero-detail> -->
+
