@@ -19,7 +19,7 @@ docker run \
 -p 1433:1433 \
 -d mssql:dev
 ```
-2. Start the .NET Core API. [Medium Article for more info]
+2. Start the .NET Core API. [Medium Article for more info](https://towardsdatascience.com/net-core-api-dive-into-c-27dcd4170066)
 From the Heroes.API directory, run:
 ```bash
 dotnet run
